@@ -1,0 +1,88 @@
+:root {
+    --numbers: #335250;
+    --operators: #f58d8f;
+    --correction: #b1b1b1;
+    --font-color: white;
+    --font-display: #494242;
+    --font-dark: #444141;
+    --background: #112b30;
+    --display: #949090;
+    --title: 'Pacifico', cursive;
+    --font: 'Roboto', sans-serif;
+}
+body {
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-family: var(--title);
+    margin: 2em 0 0.5em 0;
+    text-align: center;
+    font-size: 2.6em;
+    color: var(--font-dark);
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 17%;
+    margin: 0 auto;
+    background-color: var(--background);
+    padding: 2em;
+    border-radius: 30px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)}
+
+#display {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: right;
+    background-color: var(--display);
+    height: 100px;
+    margin-bottom: 1.2em;
+    border-radius: 10px;
+    line-height: 3;
+    padding-right: 0.6em;
+    font-family: var(--font);
+    color: var(--font-display);
+    font-size: 2em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+button {
+    border: 1px solid transparent;
+    margin: 0.3em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.8em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+button:hover {
+    transform: scale(1.2);
+    filter: brightness(150%);
+}
+
+.span-2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 88%;
+    margin-right: 3em;
+    border-radius: 100px;
+}
+
+.number {
+    background-color: var(--numbers);
+    color: var(--font-color);
+}
+
+.operator {
+    background-color: var(--operators);
+}
+
+.correction {
+    background-color: var(--correction);
+}
