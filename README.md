@@ -15,4 +15,4 @@ At first, I thought this task would be rather easy, since only basic arithmetics
 - The calculator should look nice
 
 ## Screenshot
-
+![Screenshot for the calculator](https://raw.githubusercontent.com/ngoc-truong/calculator-new/master/Screenshot_2020-04-26%20Calculator.png)
