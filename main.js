@@ -182,6 +182,7 @@ equals.addEventListener("click", (e) => {
 })
 
 reset.addEventListener("click", (e) => {
+    decimal.disabled = false;
     inputs = [];
     display.textContent = "";
 })
@@ -190,12 +191,20 @@ deleteLast.addEventListener("click", (e) => {
     display.textContent = display.textContent.slice(0, -1);
 })
 
+sign.addEventListener("click", (e) => {
+    if (display.textContent[0] === "-"){
+        display.textContent = display.textContent.substring(1, display.textContent.length);
+    } else {
+        display.textContent = "-" + display.textContent;
+    }
+})
+
+
 
 /*
  Bugs:
 - User should not be allowed to type in decimal without a number
 - Users should not be allowed to divide through zero
-
 
 
 Fixed:
@@ -208,9 +217,4 @@ Fixed:
 - User should not be allowed to write 030
 - Instead of / and * use special arithmetic symbols
 - No delete last number button 
-
-
-Nice-to-have:
-- Use regex (but I had the bug with . )
-
 */
