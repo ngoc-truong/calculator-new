@@ -1,19 +1,24 @@
 :root {
-    --numbers: #335250;
-    --operators: #f58d8f;
-    --correction: #b1b1b1;
+    --numbers: #395756;
+    --numbers-gradient: #537e7a;
+    --operators: #cf4a4c;
+    --operators-gradient: #e47e82;
+    --correction: #8a8989;
+    --correction-gradient: #c7c7c7;
     --font-color: white;
     --font-display: #494242;
     --font-dark: #444141;
     --background: #112b30;
-    --display: #949090;
+    --background-gradient: #315055;
+    --display: #817e7e;
+    --display-gradient: #9e9d9d;
     --title: 'Pacifico', cursive;
     --font: 'Roboto', sans-serif;
 }
 body {
-    background: #E0EAFC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #E0EAFC;  
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
 }
 
 h1 {
@@ -26,29 +31,35 @@ h1 {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 17%;
+    width: 320px;
     margin: 0 auto;
-    background-color: var(--background);
     padding: 2em;
     border-radius: 30px;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)}
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    background-color: var(--background);
+    background-image: linear-gradient(45deg, var(--background), var(--background-gradient), var(--background) );
+    border: 3px solid rgb(236, 236, 236);
+}
 
 #display {
     grid-column-start: 1;
     grid-column-end: 5;
     text-align: right;
-    background-color: var(--display);
     height: 100px;
     margin-bottom: 1.2em;
     border-radius: 10px;
+    border: 3px solid rgb(80, 75, 75);
     line-height: 3;
     padding-right: 0.6em;
+    padding-left: 0.6em;
     font-family: var(--font);
     color: var(--font-display);
-    font-size: 2em;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
-}
+    font-size: 1.5em;
+    background-color: var(--display);
+    background-image: linear-gradient(var(--display), var(--display-gradient), var(--display) );
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
 
 button {
     border: 1px solid transparent;
@@ -58,12 +69,11 @@ button {
     border-radius: 50%;
     font-size: 1.8em;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
 
 button:hover {
-    transform: scale(1.2);
-    filter: brightness(150%);
+    transform: scale(1.1);
+    filter: brightness(120%);
 }
 
 .span-2 {
@@ -77,12 +87,17 @@ button:hover {
 .number {
     background-color: var(--numbers);
     color: var(--font-color);
+    background-image: linear-gradient(45deg, var(--numbers), var(--numbers-gradient), var(--numbers) )
 }
 
-.operator {
+.operator, #equals {
     background-color: var(--operators);
+    background-image: linear-gradient(45deg, var(--operators), var(--operators-gradient), var(--operators) )
+
 }
 
 .correction {
     background-color: var(--correction);
+    background-image: linear-gradient(45deg, var(--correction), var(--correction-gradient), var(--correction) )
+
 }
