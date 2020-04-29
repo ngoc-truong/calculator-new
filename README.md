@@ -2,6 +2,7 @@
 In this project, I created a basic calculator with HTML, CSS and JavaScript. This project
 is part of the online curriculum [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/calculator?ref=lnav) and is suitable for practicing functions, arrays and DOM manipulation.
 
+### [Click here to see app](https://htmlpreview.github.io/?https://github.com/ngoc-truong/calculator-new/blob/master/index.html)
 ![Screenshot for the calculator](https://raw.githubusercontent.com/ngoc-truong/calculator-new/master/Screenshot_2020-04-26%20Calculator.png)
 
 ## Challenges
